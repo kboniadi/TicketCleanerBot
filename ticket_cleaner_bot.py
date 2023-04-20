@@ -40,7 +40,7 @@ def run_ticket_tool_bot():
         print(f'{client.user} has connected to Discord!')
         while True:
             # Wait for 48 hours
-            await asyncio.sleep(60 * 60 * 24 * 2)  
+            await asyncio.sleep(60 * 60 * 24)  
             # Clear inactive tickets every 48 hours
             await clear_inactive_tickets(client=client)  
     
