@@ -51,6 +51,7 @@ def run_ticket_tool_bot():
 
         if message.content == '?clear-now':
             await clear_inactive_tickets(client=client)
+            await message.channel.send("I've deleted all of the stale tickets 😊")
         
         if message.content == '?alive':
             await message.channel.send("Hello! I'm still alive 😊")
