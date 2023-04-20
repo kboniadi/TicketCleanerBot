@@ -49,7 +49,10 @@ def run_ticket_tool_bot():
         if message.author == client.user or not message.author.guild_permissions.administrator:
             return
 
-        if message.content == '?clear_all':
+        if message.content == '?clear-now':
             await clear_inactive_tickets(client=client)
+        
+        if message.content == '?alive':
+            await message.channel.send("Hello! I'm still alive 😊")
 
     client.run(TOKEN)
